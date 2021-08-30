@@ -1,0 +1,136 @@
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+.cf {
+  *zoom: 1;
+}
+
+/* My css */
+
+body {
+  background-image: url(../img/giftly.png);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.container {
+  width: 900px;
+  border: 2px solid black;
+  margin: auto;
+  box-sizing: border-box;
+}
+.menu h1 {
+  margin: 5px;
+}
+.box {
+  width: 250px;
+  float: left;
+  margin: 20px;
+  border: 1px solid black;
+}
+.box img {
+  width: 200px;
+  height: 150px;
+  background-size: cover;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgb(191, 202, 202);
+
+  margin-top: 20px;
+}
+
+.box h2 {
+  text-align: center;
+}
+.box h3 {
+  font-size: medium;
+  font-family: "Times New Roman", Times, serif;
+  color: #333;
+  font-size: 15px;
+  margin-left: 55px;
+}
+.box .cheeckbox {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  border-radius: 50px;
+  margin-top: -10px;
+  border: 1px solid black;
+  margin-bottom: 1rem;
+}
+.size h1 {
+  margin-left: 20px;
+  margin-bottom: -10px;
+}
+.size .selectsize {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  border: 1px solid black;
+  float: left;
+  margin: 125px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+.size .selectsize h2 {
+  font-size: 15px;
+  text-align: center;
+  font-weight: 200;
+  line-height: 100px;
+}
+.topings {
+  text-align: center;
+}
+.toppings h1 {
+  margin: 10px;
+  margin-bottom: 30px;
+}
+
+.toppings .toping {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  margin: 115px;
+  margin-top: -10px;
+  float: left;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.toppings .toping h2 {
+  color: #333;
+  margin-left: 120%;
+  line-height: 10px;
+  font-weight: 500;
+}
+
+.price {
+  margin: 10px;
+}
+.price h2 {
+  margin-left: 50px;
+  margin-top: -20px;
+  font-weight: 200;
+  font-style: normal;
+}

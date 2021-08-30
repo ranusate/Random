@@ -1,0 +1,50 @@
+.container {
+  width: 800px;
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  border: 1px solid black;
+}
+
+div {
+  margin: 5px;
+  justify-content: space-around;
+}
+.kotak1 {
+  width: 300px;
+  height: 300px;
+  background-color: #f60;
+  border-radius: 20px 70px 50px 5px;
+  display: flex;
+  order: 4;
+}
+h1 {
+  margin: auto;
+  font-size: 56px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 100;
+}
+.kotak2 {
+  width: 300px;
+  height: 300px;
+  background-color: salmon;
+  border-radius: 20px 80px 40px 80px;
+  display: flex;
+  order: 3;
+}
+.kotak3 {
+  width: 300px;
+  height: 300px;
+  background-color: lightcoral;
+  display: flex;
+  border-radius: 40px 80px 40px 80px;
+  order: 2;
+}
+.kotak4 {
+  width: 300px;
+  height: 300px;
+  background-color: lightblue;
+  border-radius: 40px 40px 40px 40px;
+  display: flex;
+  order: 1;
+}

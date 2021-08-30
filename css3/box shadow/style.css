@@ -1,0 +1,79 @@
+body {
+  background-color: dark;
+}
+
+
+div {
+  margin: 30px auto;
+  justify-content: center;
+  padding-top: 50px;
+}
+.container {
+  width: 900px;
+  height: auto;
+  border: 1px solid brown;
+  margin: auto;
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.satu {
+  width: 200px;
+  height: 150px;
+  border-radius: 5px;
+  box-shadow: red 0px 8px 24px;
+}   
+.dua {
+  width: 200px;
+  height: 150px;
+  box-shadow:  0px 7px 29px 0px red;
+  border-radius: 5px;
+}
+.tiga {
+  width: 200px;
+  height: 150px;
+  box-shadow: 0 10px 10px 0px red;
+  border-radius: 10px;
+}
+.empat {
+  width: 200px;
+  height: 150px;
+  box-shadow: 0px 15px 15px 0px green;
+  border-radius: 10px;
+}
+.lima {
+  width: 200px;
+  height: 150px;
+  box-shadow: 0px 5px 13px 0px red
+  
+}
+.ennam {
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 3px red;
+}
+.tujuh {
+  width: 200px;
+  height: 150px;
+  box-shadow: 0px 25px 47px 4px red;
+  border-radius: 10px;
+}
+.delapan {
+  width: 200px;
+  height: 150px;
+  box-shadow: rgb(240, 112, 112) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+  
+}
+.sembilan {
+  width: 200px;
+  height: 150px;
+  box-shadow: #9598ff 0 0 0 5px, #22b829 1px 0 0  10px , #f9d413 2px 0 0 15px , #f89853 3px 0 0 20px ,#f35858 4px 0px 0 25px; 
+}
+.sepuluh {
+  width: 200px;
+  height: 150px;
+  box-shadow: #4f4fff 0 0 0 5px inset rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+}

@@ -1,0 +1,118 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  left: 0;
+  right: 0;
+}
+
+.brand,
+h2 {
+  display: flex;
+  font-family: "Montserrat", cursive;
+  color: #242723;
+}
+
+.navbar {
+  display: flex;
+}
+
+ul {
+  display: flex;
+}
+
+.navbar ul li {
+  margin: auto 20px;
+  list-style-type: none;
+}
+.navbar ul li a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: #44546a;
+  font-weight: 500;
+}
+.navbar ul li a:hover {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: lightgrey;
+  font-weight: 500;
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  border-radius: 20px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 1px 1px 8px black;
+  cursor: pointer;
+}
+.card .card-header h1 {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  margin: 10px auto;
+  font-weight: 600;
+}
+.card-body img {
+  width: 250px;
+  display: flex;
+  margin: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.card-body p,
+h3 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 12px;
+  color: #44546a;
+  font-family: "Poppins", sans-serif;
+  margin: 10px;
+}
+.card-footer {
+  text-align: center;
+}
+.card-footer #buy {
+  width: 70px;
+  background-color: white;
+  cursor: pointer;
+}
+.card-footer #add {
+  width: 70px;
+  background-color: white;
+}
+.card-footer button {
+  border: none;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+footer {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  background-color: #44546a;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+}
+footer p {
+  color: #e7e7e7;
+  text-align: center;
+  padding: 10px;
+}
