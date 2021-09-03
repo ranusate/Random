@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  border: 1px solid brown;
+  margin: auto;
+  text-align: center;
+  background-image: url(../galery/hiker.svg);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.galery {
+  margin: 10px 10px;
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
