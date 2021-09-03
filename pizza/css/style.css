@@ -81,7 +81,7 @@ h3 {
   height: 40px;
   cursor: pointer;
 
-  margin-left: 80px;
+  /*margin-left: 80px;*/
   margin: auto;
   box-sizing: border-box;
 }

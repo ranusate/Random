@@ -1,118 +1,168 @@
 body {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 nav {
-  background-color: white;
-  display: flex;
-  justify-content: space-around;
-  left: 0;
-  right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    left: 0;
+    position: fixed;
+    right: 0;
 }
 
 .brand,
 h2 {
-  display: flex;
-  font-family: "Montserrat", cursive;
-  color: #242723;
+    display: flex;
+    font-family: "Montserrat", cursive;
+    color: #242723;
 }
 
 .navbar {
-  display: flex;
+    display: none;
 }
 
 ul {
-  display: flex;
+    display: flex;
 }
 
 .navbar ul li {
-  margin: auto 20px;
-  list-style-type: none;
+    margin: auto 20px;
+    list-style-type: none;
 }
+
 .navbar ul li a {
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  color: #44546a;
-  font-weight: 500;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    color: #44546a;
+    font-weight: 500;
 }
+
 .navbar ul li a:hover {
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  color: lightgrey;
-  font-weight: 500;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    color: lightgrey;
+    font-weight: 500;
 }
 
 .container {
-  width: 1000px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    box-sizing: border-box;
 }
 
 .card {
-  width: 300px;
-  border-radius: 20px;
-  justify-content: center;
-  margin: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-  text-align: center;
-  box-shadow: 1px 1px 8px black;
-  cursor: pointer;
+    width: 300px;
+    border-radius: 20px;
+    margin: 10px auto;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 1px 1px 8px black;
+    transition: 1s;
+    transition-delay: .5ms;
 }
+
+.card:hover {
+    box-shadow: 0 1px 13px #628aec;
+    transform: scale(1.1, 1.1);
+}
+
 .card .card-header h1 {
-  text-align: center;
-  font-size: 20px;
-  font-family: "Poppins", sans-serif;
-  margin: 10px auto;
-  font-weight: 600;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    margin: 10px auto;
+    font-weight: 600;
 }
+
 .card-body img {
-  width: 250px;
-  display: flex;
-  margin: auto;
-  border-radius: 10px;
-  object-fit: cover;
+    width: 250px;
+    display: flex;
+    margin: auto;
+    border-radius: 10px;
+    object-fit: contain;
 }
+
 .card-body p,
 h3 {
-  text-align: center;
-  font-weight: 300;
-  font-size: 12px;
-  color: #44546a;
-  font-family: "Poppins", sans-serif;
-  margin: 10px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 12px;
+    color: #44546a;
+    font-family: "Poppins", sans-serif;
+    margin: 10px;
 }
+
 .card-footer {
-  text-align: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 2px;
 }
+
 .card-footer #buy {
-  width: 70px;
-  background-color: white;
-  cursor: pointer;
+    width: 70px;
+    background-color: white;
+    cursor: pointer;
 }
+
 .card-footer #add {
-  width: 70px;
-  background-color: white;
+    width: 70px;
+    background-color: white;
 }
+
 .card-footer button {
-  border: none;
-  font-size: 20px;
-  font-family: "Poppins", sans-serif;
+    border: none;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
 }
+
 footer {
-  width: 100%;
-  height: 40px;
-  box-sizing: border-box;
-  background-color: #44546a;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    background-color: #44546a;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    margin-top: 20px;
+    display: flex;
 }
+
 footer p {
-  color: #e7e7e7;
-  text-align: center;
-  padding: 10px;
+    color: #e7e7e7;
+    text-align: center;
+    margin: auto;
+}
+
+
+/*Blog*/
+
+.hero {
+
+    width: 100%;
+    height: 300px;
+    box-shadow: 10px 10px 0 red;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.hero img {
+    margin: auto;
+
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+    .card {
+        justify-content: center;
+    }
+
+    .navbar {
+        display: flex;
+    }
 }
