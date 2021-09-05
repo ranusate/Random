@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 900px;
+  border: 2px solid black;
+  margin:10px auto;
+}
+
+.thumbnail {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content   : space-around;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.thumb {
+  width: 280px;
+  margin: 10px 1px;
+}

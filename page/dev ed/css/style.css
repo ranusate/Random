@@ -1,0 +1,143 @@
+
+.navbar {
+    font-family: 'Mulish', sans-serif;
+    position: fixed;
+    z-index: 1;
+}
+
+.navbar-nav {
+    font-weight: 200;
+    font-size: 15px;
+    color: #cccccc !important;
+}
+
+
+a {
+    color: white;
+    text-align: center;
+}
+
+a:hover {
+    color: white;
+}
+
+
+/*Utility*/
+.tombol {
+    font-size: 15px;
+    border-radius: 15px;
+    background-color: #e61f5b;
+    text-align: center;
+}
+
+
+.jumbotron {
+    background-image: url("../img/jumbotron-bg.jpg");
+    height: 400px;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    padding-top: 140px;
+    position: relative;
+
+}
+
+.jumbotron .display-4 {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.jumbotron .container {
+    position: relative;
+    z-index: 1;
+}
+
+.jumbotron::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .9));
+}
+.feature{
+    font-weight: 200;
+    font-size: 34px;
+    text-align: center;
+    margin: 50px;
+}
+.card {
+    border-right: 30px;
+}
+
+.card:hover {
+    box-shadow: 0 0 5px 0px #e61f5b;
+
+}
+
+.cards{
+ text-align: center;
+}
+card-title{
+    font-weight: bold;
+}
+.view{
+    text-align: center;
+}
+
+footer {
+    margin-top: 50px;
+    height: 40px;
+    background-color: #2b3636;
+    text-align: center;
+    display: flex;
+}
+
+
+footer p {
+    color: white;
+    margin: auto;
+    font-weight: 300;
+}
+
+@media (min-width: 992px) {
+    .jumbotron {
+        margin-top: -50px;
+        height: 580px;
+        padding-top: 180px;
+
+    }
+
+    .jumbotron .display-4 {
+        font-weight: 600;
+        font-size: 50px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .7);
+        margin-bottom: 30px;
+    }
+
+    .jumbotron p {
+        padding-bottom: 50px;
+        font-size: 23px;
+        font-weight: 200;
+    }
+
+    .nav-link:hover::after {
+        display: block;
+        content: '';
+        border-bottom: 3px solid #e61f5b;
+        width: 60%;
+        padding-top: 3px;
+        margin: auto auto -6px;
+    }
+
+    .navbar .nav-item, .navbar-brand {
+        margin-right: 12px;
+        color: white !important;
+    }
+
+    .jumbotron .container a {
+        font-weight: 600;
+        font-size: 16px;
+    }
+}

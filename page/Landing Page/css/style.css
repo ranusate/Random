@@ -25,7 +25,10 @@
     position: relative;
 
 }
-
+.jumbotron .container{
+    position: relative;
+    z-index: 1;
+}
 .jumbotron::after {
     content: '';
     display: block;
@@ -36,10 +39,7 @@
     background-image: linear-gradient(to top, rgba(0, 0, 0, .9), rgba(0, 0, 0, 0));
 }
 
-.jumbotron .container {
-    position: relative;
-    z-index: 1;
-}
+
 
 .jumbotron .display-4 {
     color: white;
