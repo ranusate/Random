@@ -61,28 +61,42 @@ a:hover {
     bottom: 0;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .9));
 }
-.feature{
+
+.feature {
     font-weight: 200;
     font-size: 34px;
     text-align: center;
     margin: 50px;
 }
+
 .card {
-    border-right: 30px;
+    border-right: 300px;
 }
 
 .card:hover {
-    box-shadow: 0 0 5px 0px #e61f5b;
+    box-shadow: 0 0 5px 0 #e61f5b;
 
 }
 
-.cards{
- text-align: center;
+.card_deck {
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
 }
-card-title{
+
+.card {
+    width: 280px;
+    text-align: center;
+    margin: 5px auto;
+}
+
+card-title {
     font-weight: bold;
 }
-.view{
+
+.view {
     text-align: center;
 }
 
