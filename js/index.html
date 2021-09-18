@@ -9,7 +9,7 @@
 
     <style>
         * {
-            border: 2px solid rgb(163, 161, 161);
+            /* border: 2px solid rgb(163, 161, 161); */
             padding: 20px;
             margin: 20px;
         }
@@ -30,11 +30,24 @@
         .of {
             background-color: #eee;
         }
+
+        #judul {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #judul span{
+            display: inline-block;
+            transition: .3s;
+        }
+        #judul span:hover {
+            transform: scale(2);
+        }
     </style>
 </head>
 
 <body>
-    <h1 id="judul">Hello World</h1>
+    <h1 id="judul">Hello</h1>
     <div id="container">
         <section id="s1">
             <p id="p1" class="p1">Paragraf 1</p>

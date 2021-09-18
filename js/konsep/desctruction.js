@@ -23,9 +23,21 @@ function cetakMhs({
 
 // console.log(cetakMhs(mhs));
 
-function jsa(as) {
-  return as.reduce((p, c) => p + c);
+function jsa(arr) {
+  return arr.reduce((p, v) => p + v);
 }
 
+// function jumlah(as) {
+//   let j = 0;
+//   as.forEach((e) => {
+//     j += e;
+//   });
+//   return j;
+// }
 let a = [1, 2, 3, 4, 5];
-console.log(jsa(a));
+let j = 0;
+
+a.forEach((e) => {
+  return (j += e);
+});
+

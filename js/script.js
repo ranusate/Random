@@ -2,11 +2,8 @@
 
 //get element by id => return element
 const judul = document.getElementById("judul");
-judul.style.color = "red";
-judul.style.backgroundColor = "white";
-judul.style.textAlign = "center";
-judul.innerHTML = "Judul Halaman";
-
+const huruf = [...judul.textContent].map((h) => `<span>${h}</span>`).join("");
+judul.innerHTML = huruf;
 // get By Tag => return HTML colection
 const p = document.getElementsByTagName("p");
 
@@ -41,9 +38,9 @@ const btn = document.querySelector("button");
 function show() {
   if (btn.classList.contains("of")) {
     btn.classList.replace("of", "on");
-    btn.innerHTML = "OFF"
+    btn.innerHTML = "OFF";
   } else {
     btn.classList.replace("on", "of");
-    btn.innerHTML = "ON Kan"
+    btn.innerHTML = "ON Kan";
   }
 }

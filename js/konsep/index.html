@@ -6,75 +6,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Filter, Map & Reduce</title>
+    <style>
+        li {
+            cursor: pointer;
+        }
+
+        .selected {
+            background: #0f0;
+        }
+    </style>
 </head>
 
 <body>
-    <h3>My Videos</h3>
-    <ul>
-        <li data-duration="15:27">Teknik Pomodoro</li>
-        <li data-duration="11:18">JAVASCRIPT LANJUTAN | Higher Order Functions</li>
-        <li data-duration="21:40">JAVASCRIPT LANJUTAN | This pada Arrow Function</li>
-        <li data-duration="19:38">Website Penipu</li>
-        <li data-duration="12:10">JAVASCRIPT LANJUTAN | Arrow Function</li>
-        <li data-duration="20:43">JAVASCRIPT LANJUTAN | Closure</li>
-        <li data-duration="14:30">#TANYAPADIKA EP005</li>
-        <li data-duration="26:38">JAVASCRIPT LANJUTAN | Execution Context</li>
-        <li data-duration="17:33">JAVASCRIPT LANJUTAN | Prototype</li>
-        <li data-duration="10:39">JAVASCRIPT LANJUTAN | Object.create()</li>
-        <li data-duration="17:31">JAVASCRIPT LANJUTAN | Object (Revisited)</li>
-        <li data-duration="14:25">5 Tips Bertanya Ketika Error</li>
-    </ul>
+<h3>My Videos</h3>
+<ul id="ul">
+    <li data-duration="15:27">Teknik Pomodoro</li>
+    <li data-duration="11:18">JAVASCRIPT LANJUTAN | Higher Order Functions</li>
+    <li data-duration="21:40">JAVASCRIPT LANJUTAN | This pada Arrow Function</li>
+    <li data-duration="19:38">Website Penipu</li>
+    <li data-duration="12:10">JAVASCRIPT LANJUTAN | Arrow Function</li>
+    <li data-duration="20:43">JAVASCRIPT LANJUTAN | Closure</li>
+    <li data-duration="14:30">#TANYAPADIKA EP005</li>
+    <li data-duration="26:38">JAVASCRIPT LANJUTAN | Execution Context</li>
+    <li data-duration="17:33">JAVASCRIPT LANJUTAN | Prototype</li>
+    <li data-duration="10:39">JAVASCRIPT LANJUTAN | Object.create()</li>
+    <li data-duration="17:31">JAVASCRIPT LANJUTAN | Object (Revisited)</li>
+    <li data-duration="14:25">5 Tips Bertanya Ketika Error</li>
+</ul>
 
-    <h3>My Playlist</h3>
-    <ol>
-        <li>
-            <h4>Javascript Lanjutan</h4>
-            <p>Jumlah Video : <span class="jumlah-video"></span></p>
-            <p>Total Durasi : <span class="total-durasi"></span></p>
-        </li>
-    </ol>
+<h3>My Playlist</h3>
+<ol>
+    <li>
+        <h4>Javascript Lanjutan</h4>
+        <p>Jumlah Video : <span class="jumlah-video"></span></p>
+        <p>Total Durasi : <span class="total-durasi"></span></p>
+    </li>
+</ol>
 
-    <button type="button" onclick="return confirm('Al?')"> Click</button>
-    <button type="button" class="btn"> Click</button>
+<button type="button" onclick="return confirm('Al?')"> Click</button>
+<button type="button" class="btn"> Click</button>
 
-    <script>
-        const btn = document.querySelector('.btn')
-        btn.addEventListener('click', () => {
-            btn.innerHTML = 'Ok'
+<script>
+    const btn = document.querySelector('.btn')
+    btn.addEventListener('click', () => {
+        btn.innerHTML = 'Ok'
+    })
+
+    // Ambil semua element videos
+    const videos = Array.from(document.querySelectorAll('[data-duration]'))
+    const jumlahVideo = document.querySelector('.jumlah-video')
+    const duration = document.querySelector('.total-durasi')
+
+    // Pilih yang hanya js lanjut
+    let jsLanjut = videos.filter(function (el) {
+        return el.textContent.includes('JAVASCRIPT LANJUTAN')
+    })
+        // Ambil durasi masing-masing video
+        .map(function (item) {
+            return item.dataset.duration
         })
-
-        // Ambil semua element videos
-        const videos = Array.from(document.querySelectorAll('[data-duration]'))
-        const jumlahVideo = document.querySelector('.jumlah-video')
-        const duration = document.querySelector('.total-durasi')
-
-        // Pilih yang hanya js lanjut
-        let jsLanjut = videos.filter(function (el) {
-            return el.textContent.includes('JAVASCRIPT LANJUTAN')
+        // ubah durasi menjasi float, ubah menit menjadi detik
+        .map(function (waktu) {
+            let parts = waktu.split(':').map(part => parseFloat(part))
+            return (parts[0] * 60) + parts[1]
         })
-            // Ambil durasi masing-masing video
-            .map(function (item) {
-                return item.dataset.duration
-            })
-            // ubah durasi menjasi float, ubah menit menjadi detik
-            .map(function (waktu) {
-                let parts = waktu.split(':').map(part => parseFloat(part))
-                return (parts[0] * 60) + parts[1]
-            })
-            // Jalankan semua detik
-            .reduce(function (total, detik) {
-                return total + detik
-            });
-        // Ubah formatnya menjadi jam, menit, detik
-        const jam = Math.floor(jsLanjut / 3600)
-        jsLanjut = (jsLanjut - jam * 3600)
-        const menit = Math.floor(jsLanjut / 60)
-        const detik = Math.floor(jsLanjut - menit * 60)
+        // Jalankan semua detik
+        .reduce(function (total, detik) {
+            return total + detik
+        });
+    // Ubah formatnya menjadi jam, menit, detik
+    const jam = Math.floor(jsLanjut / 3600)
+    jsLanjut = (jsLanjut - jam * 3600)
+    const menit = Math.floor(jsLanjut / 60)
+    const detik = Math.floor(jsLanjut - menit * 60)
 
-        // Simpan di DOM
-        jumlahVideo.innerHTML = videos.filter((el) => el.textContent.includes('JAVASCRIPT LANJUTAN')).length
-        duration.textContent = `${jam}:${menit}:${detik}`
-    </script>
+    // Simpan di DOM
+    jumlahVideo.innerHTML = videos.filter((el) => el.textContent.includes('JAVASCRIPT LANJUTAN')).length
+    duration.textContent = `${jam}:${menit}:${detik}`
+    const ok = document.querySelectorAll('.ok')
+
+    ul.addEventListener('click', function (a) {
+        if (a.target.tagName !== "LI") return;
+        if (a.ctrlKey || a.altKey || a.metaKey || a.shiftKey) {
+            a.target.classList.toggle('selected')
+        } else {
+            singleSelect(a.target)
+        }
+    })
+    ul.onmousedown = () => false;
+
+    function singleSelect(li) {
+        const selected = document.querySelectorAll('.selected')
+        for (let el of selected) {
+            el.classList.remove('selected')
+        }
+        li.classList.add('selected')
+    }
+
+</script>
 </body>
 
 </html>
