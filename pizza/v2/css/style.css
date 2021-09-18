@@ -1,0 +1,27 @@
+/* body{
+  margin: 0;
+  padding: 0;
+} */
+
+.main {
+  width: 900px;
+  border: 1px solid black;
+  margin: auto;
+}
+
+.hero_section {
+  display: grid;
+}
+.card {
+  width: 250px;
+  height: 300px;
+  box-shadow: 1px 1px 1px black;
+  text-align: center;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  padding: auto 15px;
+}

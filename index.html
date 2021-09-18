@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        text-align: center;
+    }
+
+    .container {
+        display: inline-block;
+    }
+
+    button {
+        display: block;
+        margin: 20px auto;
+    }
+</style>
+
+<body>
+    <div class="container">
+
+
+        <label for="pizza1"><input type="radio" name="pizza1" id="pizza1" value="8"> pizza 1</label>
+        <label for="pizza1"><input type="radio" name="pizza1" id="pizza2" value="10"> pizza 3</label>
+        <label for="pizza1"><input type="radio" name="pizza1" id="pizza3" value="12"> pizza 3</label>
+        <button>Show</button>
+        <h1>Price</h1>
+    </div>
+
+    <script>
+        let btn = document.querySelector('button')
+        let show = document.querySelector('h1')
+
+        btn.addEventListener('click', () => {
+            let sel = document.querySelector('input[type="radio"]:checked')
+            show.innerHTML = sel.parentElement.textContent
+        })
+    </script>
+</body>
+
+</html>
