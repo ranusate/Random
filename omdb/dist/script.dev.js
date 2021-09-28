@@ -4,7 +4,7 @@
 //   $.ajax({
 //     url:
 //       "http://www.omdbapi.com/?apikey=3192400b&i=tt3896198&s=" +
-//       $(".input-keyword").val(),
+//        
 //     success: function (response) {
 //       let movie = response.Search;
 //       let cards = "";
